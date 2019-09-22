@@ -1,0 +1,23 @@
+2)    Predicted throughput:16.873 Mbps
+      Predicted latency:124.889 ms
+      Actual throughput:15.817 Mbps
+      Actual latency:125.211 ms
+      Explanation of results:
+
+3.1)  Predicted throughput:8.436 Mbps
+      Predicted latency:
+      Actual throughput:
+      Actual latency:
+      Explanation of results:
+
+3.2)  Predicted throughput:
+      Predicted latency:
+      Actual throughput:
+      Actual latency:
+      Explanation of results:
+
+4)    Predicted throughput:10 Mbps
+      Predicted latency:
+      Actual throughput:
+      Actual latency:
+      Explanation of results:
