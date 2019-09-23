@@ -1,8 +1,8 @@
-iperfer : iperfer.o
-	gcc -o iperfer iperfer.o
+iPerfer : iPerfer.o
+	gcc -o iPerfer iPerfer.o
 
-iperfer.o : iperfer.c
-	gcc -c iperfer.c
+iPerfer.o : iPerfer.c
+	gcc -c iPerfer.c
 
 clean: 
-	rm iperfer iperfer.o
+	rm iPerfer iPerfer.o
