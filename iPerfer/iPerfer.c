@@ -85,7 +85,7 @@ int server(int argc, char *argv[])
     recv_ = recv_byte/1000;
     rate = recv_byte*8.0/(1000000*duration);
     //printf("received = %ld KB, Rate = %.3f Mbps, duration = %.3f s\n", recv_, rate, duration);
-    printf("Received = %ld KB, Rate = %.3f Mbps\n", recv_, rate);
+    printf("Received=%ld KB, Rate=%.3f Mbps\n", recv_, rate);
 
     return 0;
 }
@@ -191,7 +191,7 @@ int client(int argc, char *argv[])
     sent = sent_byte/1000;
     rate = sent_byte*8/(1000000*duration);
     //printf("sent = %ld KB, Rate = %.3f Mbps, duration = %.3f s\n", sent, rate, duration);
-    printf("Sent = %ld KB, Rate = %.3f Mbps\n", sent, rate);
+    printf("Sent=%ld KB, Rate=%.3f Mbps\n", sent, rate);
 
     return 0;
 }
