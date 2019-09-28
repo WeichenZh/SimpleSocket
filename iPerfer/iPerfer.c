@@ -201,9 +201,9 @@ int main(int argc, char *argv[])
 	if(!strcmp(argv[1], "-s"))
 		server(argc, argv);
 	else if(!strcmp(argv[1], "-c"))
-        client(argc, argv);
- \\   else
- \\       error("Error:invalid service mode!");
+        	client(argc, argv);
+    	else
+        	error("Error:invalid service mode!");
 
     return 0;
 }
