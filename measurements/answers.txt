@@ -1,23 +1,29 @@
-2)    Predicted throughput:16.873 Mbps
-      Predicted latency:124.889 ms
-      Actual throughput:15.817 Mbps
-      Actual latency:125.211 ms
-      Explanation of results:
+2)    Predicted throughput:18 Mbps
+      Predicted latency: 60 ms
+      Actual throughput:15.906 Mbps
+      Actual latency:62.06 ms
+      Explanation of results: L1 is bottleneck, so the throughput of the path can't be greater than that. And the latency is the sum of all latency of links in the path.
 
-3.1)  Predicted throughput:8.436 Mbps
-      Predicted latency:
-      Actual throughput:
-      Actual latency:
-      Explanation of results:
+3.1)  Predicted throughput:the sum of throughputs should be around 20 Mbps, and ideally the throughput of each pair is about 10 Mbps
+      Predicted latency:60 ms
+      Actual throughput:h1-h10:14.906 Mbps
+                                      h5-h6: 15.281 Mbps
+      Actual latency:62.523 ms
+      Explanation of results:Two paths share same links, thus the throughput of each path should be the half of bottleneck if they communicate to the destination hosts at the same time. While the data of ping is small, there will be no more queuing delay, so the latencies remain unchanged. Actually, I don't know why the output is not consistent with my prediction.
 
-3.2)  Predicted throughput:
-      Predicted latency:
-      Actual throughput:
-      Actual latency:
-      Explanation of results:
+3.2)  Predicted throughput: The sum of throughtpus should be around 20 Mbps. Ideally, the throughput of each pair is about 7 Mbps
+      Predicted latency:60 ms
+      Actual throughput: h1-h10: 11.207 Mbps
+                                       h5-h6: 4.580 Mbps
+                                       h2-h9: 8.577 Mbps
+      Actual latency:62.35 ms
+      Explanation of results:the reason is same as above.
 
-4)    Predicted throughput:10 Mbps
-      Predicted latency:
-      Actual throughput:
-      Actual latency:
-      Explanation of results:
+4)    Predicted throughput: The sum of  throughputs is around 25 Mbps. Ideally, each throughput is about 12.5 Mbps.
+      Predicted latency:h1-h10: 60 ms
+                        h3-h8: 15 ms
+      Actual throughput: h1-h10: 8.089 Mbps
+                                       h3-h8: 14.784 Mbps
+      Actual latency: h1-h10:60.418 ms
+                                h3-h8:15.256 ms
+      Explanation of results:Two paths share L2, L4, so the throughput should be the half of least bandwith which is 25 Mbps. And latencies of these two path don't affect each other. So the latencies are the sum of latencies of link in each paths.

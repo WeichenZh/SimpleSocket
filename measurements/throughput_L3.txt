@@ -1,2 +1,2 @@
-received = 72159 KB, Rate = 24.053 Mbps, duration = 24.000 s
-sent = 72158 KB, Rate = 24.053 Mbps, duration = 24.000 s
+Received=84709 KB, Rate=27.107 Mbps
+Sent=84709 KB, Rate=27.107 Mbps

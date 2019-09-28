@@ -68,7 +68,7 @@ int server(int argc, char *argv[])
      	if (!strcmp(fin, "disconnect"))
      	{
             //printf("now we sent acknowledge\n");
-     		n = write(newsockfd, "acknowledge", 31);
+     		n = send(newsockfd, "acknowledge", 11, 0); 
      		if (n < 0) error("ERROR writing to socket");
             close(newsockfd);
      		break;
@@ -155,7 +155,7 @@ int client(int argc, char *argv[])
     {
     	bzero(buffer, 2000);
     	bcopy((char *)msg, (char *)buffer, 1000);
-    	n = write(sockfd, buffer, 1000);
+    	n = send(sockfd, buffer, 1000, 0);
     	if (n < 0)
     		error("ERROR writing to socket");
     	sent_byte += n;
@@ -163,9 +163,6 @@ int client(int argc, char *argv[])
         t2 = time(NULL);
         if (timer < difftime(t2, t1))
     	{
-            //printf("now we exits sending\n");
-            // t2 = time(NULL);
-            // printf("%ld\n", t2);
     		break;
     	}
     }
@@ -173,18 +170,17 @@ int client(int argc, char *argv[])
     while (1)
     {
     	bzero(buffer,1000);
-        n = write(sockfd, fin, 1000);
+        n = send(sockfd, fin, 1000, 0);
         if (n < 0) error("ERROR writing to socket");
         sent_byte += n;
 
-    	n = read(sockfd,buffer,1000);
+    	n = recv(sockfd,buffer,1000, 0);
     	if (n < 0) error("ERROR reading from socket");
 
     	if (!strcmp(buffer, "acknowledge"))
     	{
     		close(sockfd);
             t2 = time(NULL);
-            //printf("t2 = %ld\n", t2);
     		break;
     	}
     }
