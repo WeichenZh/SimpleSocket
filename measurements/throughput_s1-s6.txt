@@ -1,8 +1,0 @@
-h2-h6
-received = 34831 KB, Rate = 10.320 Mbps, duration = 27.000 s
-sent = 34830 KB, Rate = 12.665 Mbps, duration = 22.000 s
-
-h1-h10
-received = 44548 KB, Rate = 13.199 Mbps, duration = 27.000 s
-sent = 44547 KB, Rate = 14.849 Mbps, duration = 24.000 s
-
