@@ -20,7 +20,8 @@
       Explanation of results:the reason is same as above.
 
 4)    Predicted throughput: The sum of  throughputs is around 25 Mbps. Ideally, each throughput is about 12.5 Mbps.
-      Predicted latency:h1-h10: 60 ms/ 15 ms
+      Predicted latency:h1-h10: 60 ms
+                        h3-h8: 15 ms
       Actual throughput: h1-h10: 8.089 Mbps
                                        h3-h8: 14.784 Mbps
       Actual latency: h1-h10:60.418 ms
